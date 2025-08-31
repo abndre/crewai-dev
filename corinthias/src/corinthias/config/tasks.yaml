@@ -1,0 +1,9 @@
+research_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+  expected_output: >
+    Responder em um paragrafo  sobre {topic}
+    Sempre responder em portugues pt-br
+  agent: researcher
+
