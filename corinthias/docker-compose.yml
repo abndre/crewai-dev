@@ -1,0 +1,17 @@
+
+
+services:
+  corinthias:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL: "ollama/llama3.1"
+      API_BASE: "http://host.docker.internal:11434"
+      LITELLM_MODEL: "ollama/llama3"
+      OPENAI_API_KEY: fake_key
+    volumes:
+      - ./knowledge:/app/knowledge
+      - ./config:/app/config
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
